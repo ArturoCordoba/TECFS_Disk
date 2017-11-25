@@ -1,0 +1,11 @@
+<Data>
+    <Ip>
+        192.168.100.9
+    </Ip>
+    <Port>
+        2000
+    </Port>
+    <Path>
+        /home/fabian/CLionProjects/TECFS_Disk/cmake-build-debug/Disk
+    </Path>
+</Data>
