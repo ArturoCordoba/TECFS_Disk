@@ -37,7 +37,6 @@ int main(){
                 //Se solicita la informacion almacenada en el disco
                 } else if(strcmp(action2.c_str(), "get") == 0){
                     std::string data = DataBaseHandler::getData();
-                    std::cout << data << std::endl;
                     sf::Packet packet;
                     packet << data;
                     server->send(packet);
@@ -58,6 +57,12 @@ int main(){
                 std::string part = VideoHandler::getPart(fileName);
                 sf::Packet responsePacket;
                 responsePacket << part;
+                server->send(responsePacket);
+
+            //Se recibe una verificacion de conexion
+            } else if(strcmp(action, "verifyingConnection...") == 0){
+                sf::Packet responsePacket;
+                responsePacket << "Connected";
                 server->send(responsePacket);
             }
         }
