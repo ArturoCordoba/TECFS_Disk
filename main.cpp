@@ -12,8 +12,8 @@ int main(){
     std::cin >> num;
     Singleton::createDiskDirectory(num);
     std::cout << "Disco creado" << std::endl;
-
     sf::TcpSocket* server = Singleton::getServer();
+    Singleton::createDiskBlocks(Singleton::getDirectory());
 
     while(true){
         sf::Packet receivePacket;

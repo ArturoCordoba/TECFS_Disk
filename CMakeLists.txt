@@ -3,7 +3,7 @@ project(TECFS_Disk)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp DataBaseHandler.cpp DataBaseHandler.h Singleton.cpp Singleton.h VideoHandler.cpp VideoHandler.h)
+set(SOURCE_FILES main.cpp Parse.h DataStructures/LinkedList.h DataStructures/Node.h DataBaseHandler.cpp DataBaseHandler.h Singleton.cpp Singleton.h VideoHandler.cpp VideoHandler.h Parse.h)
 add_executable(TECFS_Disk ${SOURCE_FILES})
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")

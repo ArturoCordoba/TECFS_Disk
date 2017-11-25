@@ -15,6 +15,8 @@
 
 class Singleton {
 public:
+    static std::string data;
+
     static Singleton* getInstance();
 
     static sf::TcpSocket* getServer();
@@ -22,6 +24,8 @@ public:
     static std::string getDirectory();
 
     static void createDiskDirectory(int diskNum);
+
+    static void createDiskBlocks(std::string path);
 
 private:
     Singleton();
